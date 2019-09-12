@@ -6,7 +6,9 @@ export default function NasaGrid() {
   const [space, setSpace] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+    Axios.get(
+      `https://api.nasa.gov/planetary/apod?api_key=y7M9RDUHoR9Li7oHUGwaVbtkICKASJP6EYBTfMDX`
+    )
       .then(response => {
         const space = response.data;
         console.log("the photo", space);

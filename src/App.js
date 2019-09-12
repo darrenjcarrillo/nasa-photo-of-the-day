@@ -11,6 +11,14 @@ const Header = styled.header`
   height: 5rem;
 `;
 
+const Footer = styled.header`
+  display: flex;
+  justify-content: space-evenly;
+  background: black;
+  width: 100%;
+  height: 5rem;
+`;
+
 const Link = styled.a`
   text-decoration: none;
   color: ${props => (props.primary ? "#fff" : "#000")};
@@ -20,6 +28,23 @@ const Link = styled.a`
   transition: 0.2s ease-in;
   &:hover {
     color: #c7493a;
+  }
+`;
+
+const SpaceButton = styled.button`
+  width: 20rem;
+  height: 5rem;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 2.5rem;
+  transition: 0.2s ease-in;
+  font-weight: 600;
+  background: ${props => (props.primary ? "#fff" : "#689775")};
+  color: ${props => (props.primary ? "#689775" : "#fff")};
+  &:hover {
+    background: ${props => (props.primary ? "#689775" : "#fff")};
+    color: ${props => (props.primary ? "#fff" : "#689775")};
   }
 `;
 
@@ -40,8 +65,9 @@ function App() {
           STARS
         </Link>
       </Header>
-      <h1>NASA PICTURE OF THE DAY</h1>
       <NasaGrid />
+      <SpaceButton>BOOK YOUR TRIP TO MARS</SpaceButton>
+      <Footer></Footer>
     </div>
   );
 }
