@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import TitleCard from "./TitleCard";
+import NasaCard from "./NasaCard";
 import Axios from "axios";
 
-export default function NasaTitle() {
+export default function NasaGrid() {
   const [space, setSpace] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function NasaTitle() {
 
   return (
     <div className="main-container">
-      <TitleCard
+      <NasaCard
         title={space.title}
         photo={space.url}
         date={space.date}
