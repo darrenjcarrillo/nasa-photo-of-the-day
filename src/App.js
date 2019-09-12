@@ -13,10 +13,16 @@ const Header = styled.header`
 
 const Footer = styled.header`
   display: flex;
-  justify-content: space-evenly;
   background: black;
   width: 100%;
   height: 5rem;
+`;
+
+const ContainerFooter = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
 `;
 
 const Link = styled.a`
@@ -67,7 +73,22 @@ function App() {
       </Header>
       <NasaGrid />
       <SpaceButton>BOOK YOUR TRIP TO MARS</SpaceButton>
-      <Footer></Footer>
+      <Footer>
+        <ContainerFooter>
+          <Link primary href="#">
+            PLANETS
+          </Link>
+          <Link primary href="#">
+            SOLAR SYSTEM
+          </Link>
+          <Link primary href="#">
+            GALAXY
+          </Link>
+          <Link primary href="#">
+            STARS
+          </Link>
+        </ContainerFooter>
+      </Footer>
     </div>
   );
 }
